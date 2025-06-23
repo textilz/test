@@ -5,7 +5,7 @@
     --light-green: #8BC34A;
     --bright-orange: #FF9800;
     --dark-orange: #FF5722;
-    --light-gray: #F5F5F5;
+    --light-gray: white;
     --gray: #000000;
     --dark-gray: #040852;
     --light-beige: rgba(0, 123, 255, 0.11);
@@ -127,18 +127,15 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: white;!important; /* Цвет текста ссылок */
+    color: white; /* Цвет текста ссылок */
     text-align: center;
     padding: 14px;
     text-decoration: none;
 }
 
 nav ul li a:hover {
-    color: white;!important; /* Цвет текста ссылок */
-}
-
-nav ul li a:hover {
     background-color: var(--hover-blue); /* Темно-синий для эффекта при наведении */
+    color: white;!important;
 }
 
 main {
@@ -200,23 +197,15 @@ main h1{
 }
 
 .table {
-    border-collapse: collapse;
     margin-bottom: 50px;
 }
 
 th, td {
-    border: 1px solid var(--gray); /* Светлый серый для границ ячеек */
     padding: 10px;
     text-align: center;
 }
 
 th {
-    background-color: var(--medium-green); /* Средний зеленый для заголовков таблицы */
-    color: #000000;
-}
-
-tr:nth-child(even) {
-    background-color: var(--light-beige); /* Светлый бежевый для четных строк */
 }
 
 .debt h2{

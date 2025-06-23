@@ -36,7 +36,7 @@
                     <td>{{ $user->birthday ? $user->birthday : 'Не указана' }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->role->name ?? 'Не указана' }}</td>
-                    <td>Удалить</td>
+                    <td><a href="{{route('adminDestroyUser', ['id' => $user->id])}}">Удалить</a></td>
                 </tr>
             @endforeach
             </tbody>

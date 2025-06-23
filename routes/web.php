@@ -36,6 +36,8 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 
+Route::middleware('auth:sanctum')->get('/schedule/', [IndexController::class, 'schedule'])->name('schedule');
+
 Route::middleware('auth:sanctum')->middleware('teacher')->group(function () {
 //    Route::get('/schedule', [UserDateController::class, 'index'])->name('scheduleWeb');
 //    Route::get('/journal', [UserDateController::class, 'index'])->name('scheduleWeb');
@@ -46,8 +48,9 @@ Route::middleware('auth:sanctum')->middleware('teacher')->group(function () {
         Route::get('/users/', [UserController::class, 'index'])->name('adminUser');
         Route::get('/courses/{id}/destroy', [CourseController::class, 'destroy'])->name('adminDestroyCourse');
         Route::get('/groups/{id}/destroy', [GroupController::class, 'destroy'])->name('adminDestroyGroup');
-        Route::get('/courses/{courseId}/{groupId}/users/destroy', [GroupController::class, 'destroy'])->name('adminDestroyUserGroup');
+        Route::get('/courses/{courseId}/{groupId}/{userId}/destroy', [GroupController::class, 'destroyUser'])->name('adminDestroyUserGroup');
         Route::get('/courses/{courseId}/{groupId}/{lessonId}/destroy', [LessonController::class, 'destroy'])->name('adminDestroyLesson');
+        Route::get('/users/{id}/destroy', [UserController::class, 'destroy'])->name('adminDestroyUser');
     });
     Route::get('/courses/{courseId}/{groupId}/{lessonId}/tasks/destroy', [TaskController::class, 'destroy'])->name('adminDestroyTasks');
 

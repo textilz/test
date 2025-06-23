@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Group;
+use App\Models\User;
 use App\Models\UserGroup;
 use Illuminate\Http\Request;
 
@@ -49,6 +50,14 @@ class GroupController extends Controller
             'group_id' => $groupId,
             'user_id' => $request->user_id
         ]);
+
+        return redirect()->route('adminGroupUsers', ['courseId' => $courseId, 'groupId' => $groupId])->with('success', 'Ученик добавлен');
+    }
+
+    public function destroyUser($courseId, $groupId, $userId)
+    {
+
+        UserGroup::where('group_id', $groupId)->where('user_id', $userId)->delete();
 
         return redirect()->route('adminGroupUsers', ['courseId' => $courseId, 'groupId' => $groupId])->with('success', 'Ученик добавлен');
 

@@ -14,13 +14,10 @@ class OrganizationSeeder extends Seeder
     public function run(): void
     {
         Organization::factory()->create([
-            'address' => '',
+            'address' => 'ул. Мира, 11А',
         ]);
         Organization::factory()->create([
-            'address' => '',
-        ]);
-        Organization::factory()->create([
-            'address' => '',
+            'address' => 'ул. Мира, 14А',
         ]);
     }
 }

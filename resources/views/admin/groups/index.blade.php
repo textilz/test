@@ -5,6 +5,7 @@
 
 @section('content')
     <div class="container mt-5">
+        <a href="{{route('adminCourse')}}">Назад</a>
         <h2>Добавить группу</h2>
 
         @if (session('success'))
@@ -57,7 +58,7 @@
                         <td><a href="{{route('adminGroupUsers', ['courseId' => $courseId, 'groupId' => $group->id])}}">Смотреть</a></td>
                         <td><a href="{{route('adminGroupLessons', ['courseId' => $courseId, 'groupId' => $group->id])}}">Смотреть</a></td>
                         @if (Auth::user()->role_id == 4)
-                        <td><a href="{{route('adminDestroyGroup', ['courseId' => $courseId, 'groupId' => $group->id])}}">Удалить</a></td>
+                        <td><a href="{{route('adminDestroyGroup', ['id' => $group->id])}}">Удалить</a></td>
                         @endif
                     </tr>
                 @endforeach

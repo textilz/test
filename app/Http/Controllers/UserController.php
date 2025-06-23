@@ -14,4 +14,11 @@ class UserController extends Controller
 
         return view('admin.user.users', compact('users'));
     }
+
+    public function destroy($userId)
+    {
+        User::destroy($userId);
+
+        return redirect()->back();
+    }
 }

@@ -14,7 +14,16 @@ class SubjectSeeder extends Seeder
     public function run(): void
     {
         Subject::factory()->create([
-            'name' => 'Математика'
+            'name' => 'Английский язык'
+        ]);
+        Subject::factory()->create([
+            'name' => 'Баскетбол'
+        ]);
+        Subject::factory()->create([
+            'name' => 'ОГЭ по математике'
+        ]);
+        Subject::factory()->create([
+            'name' => 'ОГЭ по русскому'
         ]);
     }
 }

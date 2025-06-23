@@ -13,7 +13,7 @@
     --light-green: #8BC34A;
     --bright-orange: #FF9800;
     --dark-orange: #FF5722;
-    --light-gray: #F5F5F5;
+    --light-gray: white;
     --gray: #000000;
     --dark-gray: #040852;
     --light-beige: rgba(0, 123, 255, 0.11);
@@ -31,5 +31,13 @@ body {
     font-family: Jura;
     margin: 0;
     padding: 0;
-    background-color: var(--light-gray);
+    background-color: white;
+}
+
+header{
+    background-color: white;
+}
+
+main{
+    background-color: white;
 }

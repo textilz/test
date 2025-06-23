@@ -1,0 +1,86 @@
+.week{
+    text-align: center;
+    font-size: 25px;
+    color: #0051ff;
+    font-weight: bold;
+    padding-top: 20px;
+    height: 50px;
+}
+
+.journal-table{
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    background-color: transparent;
+    justify-content: space-between;
+}
+
+.journal-body{
+}
+
+.journal-body tr{
+    height: 100px;
+    text-align: left;
+}
+
+/* Общие стили для таблицы */
+.journal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+/* Стили для тела таблицы */
+.journal-body {
+    background-color: #ffffff;
+}
+
+/* Стили для строк таблицы */
+.journal-table tr {
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Стили для ячеек с днями */
+.journal-day {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Стили для ячеек с временем и предметами */
+.journal-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Стили для заголовков дней */
+.journal-day div {
+    font-weight: normal;
+    font-size: 3.2em;
+}
+
+/* Стили для дат */
+.journal-day div:nth-child(2) {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Стили для строк при наведении */
+.journal-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Стили для последней строки таблицы */
+.journal-table tr:last-child {
+    border-bottom: none;
+}
+
+.dz{
+    width: 50%;
+}
+
+.journal-day-title{
+    /*font-size: 50px;*/
+}
+.seconding{
+    height: ;
+}

@@ -5,7 +5,6 @@
 @section('content')
 
     <div class="container mt-5">
-        <a href="{{route('adminCourse')}}">Назад</a>
         <h2>Создать курс</h2>
 
         @if (session('success'))

@@ -5,6 +5,7 @@
 
 @section('content')
     <div class="container mt-5">
+        <a href="{{route('adminGroup', ['id' => $groupId])}}">Назад</a>
         <h2>Занятия</h2>
 
         @if (session('success'))

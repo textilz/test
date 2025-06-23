@@ -33,4 +33,14 @@ class LessonController extends Controller
         ])->with('success', 'Занятие добавлено');
 
     }
+
+    public function destroy($courseId, $groupId, $lessonId)
+    {
+        Lesson::destroy($lessonId);
+
+        return redirect()->route('adminGroupLessons', [
+            'courseId' => $courseId,
+            'groupId' => $groupId,
+        ]);
+    }
 }
