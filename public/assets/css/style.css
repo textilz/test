@@ -1,0 +1,394 @@
+:root {
+    --dark-blue: #003366;
+    --bright-blue: #007BFF;
+    --medium-green: #ffffff;
+    --light-green: #8BC34A;
+    --bright-orange: #FF9800;
+    --dark-orange: #FF5722;
+    --light-gray: #F5F5F5;
+    --gray: #000000;
+    --dark-gray: #040852;
+    --light-beige: rgba(0, 123, 255, 0.11);
+    --bright-red: #fd4436;
+    --purple: #9C27B0;
+    --link-blue: #007BFF;
+    --hover-blue: #0056b3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--medium-green);
+    padding: 10px 20px;
+}
+
+.logo{
+    display:flex;
+    gap: 5px;
+    align-items: center;
+    margin-left: 7px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo span{
+    font-size: 35px;
+    color: #040852;
+    font-weight: 600;
+}
+
+.login-button{
+    display:flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.login-button-span{
+    font-size: 18px;
+    font-weight: bolder;
+    color: #007BFF;
+}
+.login-button img{
+    width: 30px;
+}
+
+.login-button-exit {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: var(--bright-red); /* Яркий красный для кнопки входа */
+    border-radius: 10px;
+}
+
+.login-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Выравнивание по правому краю */
+    padding: 10px;
+}
+
+.message-icon {
+    position: relative;
+    margin-left: 10px; /* Отступ между именем и иконкой сообщений */
+}
+
+.message-icon img {
+    width: 30px; /* Ширина иконки сообщений */
+    height: auto; /* Автоматическая высота */
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px; /* Положение счетчика по вертикали */
+    right: -10px; /* Положение счетчика по горизонтали */
+    background-color: red;
+    color: #ffffff; /* Цвет текста счетчика */
+    border-radius: 50%; /* Круглая форма */
+    padding: 2px 5px; /* Отступы внутри счетчика */
+    font-size: 12px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+nav {
+    background-color: var(--dark-gray); /* Темный серый */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    flex: 1;
+}
+
+nav ul li a {
+    display: block;
+    color: white;!important; /* Цвет текста ссылок */
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: white;!important; /* Цвет текста ссылок */
+}
+
+nav ul li a:hover {
+    background-color: var(--hover-blue); /* Темно-синий для эффекта при наведении */
+}
+
+main {
+    padding-left: 20px;
+}
+
+main h1{
+    color: #040852;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на следующую строку */
+    gap: 20px; /* Отступ между карточками */
+    justify-content: flex-start; /* Центрирует карточки по горизонтали */
+}
+
+.card {
+    border: 1px solid var(--dark-gray); /* Светлый серый для границ карточек */
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white; /* Белый фон для карточек */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для карточек */
+    width: calc(33.33% - 20px); /* Ширина карточки (3 карточки в ряд с учетом отступов) */
+    height: 360px;
+    box-sizing: border-box; /* Учитывает отступы и границы в ширине */
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--dark-gray); /* Темно-синий для заголовков карточек */
+}
+
+.card p {
+    color: var(--dark-blue); /* Темный серый для текста */
+}
+
+.card .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: var(--bright-blue); /* Яркий синий для кнопок */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card .button:hover {
+    background-color: var(--hover-blue); /* Темно-синий для эффекта при наведении на кнопки */
+}
+
+.schedule-table{
+    width: 98%;
+}
+.reports-table{
+    width: 70%;
+}
+
+.table {
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+th, td {
+    border: 1px solid var(--gray); /* Светлый серый для границ ячеек */
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--medium-green); /* Средний зеленый для заголовков таблицы */
+    color: #000000;
+}
+
+tr:nth-child(even) {
+    background-color: var(--light-beige); /* Светлый бежевый для четных строк */
+}
+
+.debt h2{
+    color: #040852;
+}
+
+.date-debt{
+    color: #444444;
+    margin-right: 10px;
+}
+
+.subject{
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 40px;
+}
+
+.task{
+    font-size: 15px;
+}
+
+.achievement-cards {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на следующую строку */
+    gap: 20px; /* Отступ между карточками */
+    justify-content: flex-start; /* Центрирует карточки по горизонтали */
+}
+
+.achievement-card {
+    border: 1px solid var(--dark-gray); /* Светлый серый для границ карточек */
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white; /* Белый фон для карточек */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для карточек */
+    width: 98%; /* Ширина карточки (3 карточки в ряд с учетом отступов) */
+    height: 260px;
+    box-sizing: border-box; /* Учитывает отступы и границы в ширине */
+    margin-bottom: 10px;
+}
+
+.filter {
+    padding:  0 0 0 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.basic-filters{
+    display: flex;
+    gap: 10px;
+}
+
+.filter-button {
+    background-color: var(--dark-gray);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.filter-button:hover {
+    background-color: #d32f2f;
+}
+
+.exam-type button {
+    background-color: #fd4436;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.exam-type button:hover {
+    background-color: #d32f2f;
+}
+
+.subject {
+    margin-top: 10px;
+}
+
+.subject label {
+    color: #040852;
+}
+
+#subject {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.tutors-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 0 30px 10px;
+}
+
+.tutors-list-title{
+    padding: 0 0 0 10px;
+    color: #040852;
+}
+
+.tutor-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(48% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 15px;
+}
+
+.tutor-card img {
+    width: 50%;
+    border-radius: 5px;
+}
+
+.tutor-card div{
+    justify-content: space-between;
+}
+
+.tutor-card h3 {
+    color: #040852;
+}
+
+.tutor-card p {
+    color: #555;
+}
+
+.button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.pgf-img{
+    width: 30px;
+    height: 30px;
+}
+
+.reports-pdf{
+    display: flex;
+    gap: 10px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--dark-gray); /* Темный серый для подвала */
+    color: white; /* Белый текст в подвале */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}

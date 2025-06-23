@@ -1,0 +1,16 @@
+@import 'components/_button.css';
+@import 'components/_card.css';
+@import 'components/_modal.css';
+@import 'components/_navbar.css';
+
+@import 'pages/_header.css';
+@import 'pages/_index.css';
+@import 'pages/_footer.css';
+@import 'pages/_profile.css';
+@import 'pages/_photographer.css';
+@import 'pages/_equipment.css';
+@import 'pages/_studio.css';
+@import 'pages/_studios.css';
+@import 'pages/_signup.css';
+@import 'pages/_signin.css';
+
