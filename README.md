@@ -7,6 +7,33 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Локальный запуск
+
+Требуются PHP 8.1 или новее, Composer, Node.js с npm и MySQL.
+
+1. Установите зависимости и создайте локальную конфигурацию:
+
+   ```bash
+   composer install
+   cp .env.example .env
+   php artisan key:generate
+   npm install
+   ```
+
+2. Создайте базу данных MySQL и укажите параметры подключения `DB_*` в `.env`.
+3. Примените миграции и запустите сервер:
+
+   ```bash
+   php artisan migrate
+   php artisan serve
+   ```
+
+4. В отдельном терминале выполните `npm run dev` для запуска Vite.
+
+Приложение будет доступно по адресу http://127.0.0.1:8000.
+Для сборки ресурсов используйте `npm run build`, для запуска тестов — `php artisan test`.
+Файл `.env` содержит локальные настройки и секреты: не добавляйте его в Git.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
